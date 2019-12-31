@@ -21,9 +21,50 @@ button10am.addEventListener('click', function() {
     localStorage.setItem('appt10am', input10amValue);
 })
 
+button11am.addEventListener('click', function() {
+    var input11amValue = document.querySelector('#input11am').value;
+    localStorage.setItem('appt11am', input11amValue);
+})
+
+button12pm.addEventListener('click', function() {
+    var input12pmValue = document.querySelector('#input12pm').value;
+    localStorage.setItem('appt12pm', input12pmValue);
+})
+
+button1pm.addEventListener('click', function() {
+    var input1pmValue = document.querySelector('#input1pm').value;
+    localStorage.setItem('appt1pm', input1pmValue);
+})
+
+button2pm.addEventListener('click', function() {
+    var input2pmValue = document.querySelector('#input2pm').value;
+    localStorage.setItem('appt2pm', input2pmValue);
+})
+
+button3pm.addEventListener('click', function() {
+    var input3pmValue = document.querySelector('#input3pm').value;
+    localStorage.setItem('appt3pm', input3pmValue);
+})
+
+button4pm.addEventListener('click', function() {
+    var input4pmValue = document.querySelector('#input4pm').value;
+    localStorage.setItem('appt4pm', input4pmValue);
+})
+
+button5pm.addEventListener('click', function() {
+    var input5pmValue = document.querySelector('#input5pm').value;
+    localStorage.setItem('appt5pm', input5pmValue);
+})
 
 window.onload = function(){
     // Set the values in local storage back to the inputs
     document.querySelector('#input9am').value = localStorage.getItem('appt9am');
     document.querySelector('#input10am').value = localStorage.getItem('appt10am');
+    document.querySelector('#input11am').value = localStorage.getItem('appt11am');
+    document.querySelector('#input12pm').value = localStorage.getItem('appt12pm');
+    document.querySelector('#input1pm').value = localStorage.getItem('appt1pm');
+    document.querySelector('#input2pm').value = localStorage.getItem('appt2pm');
+    document.querySelector('#input3pm').value = localStorage.getItem('appt3pm');
+    document.querySelector('#input4pm').value = localStorage.getItem('appt4pm');
+    document.querySelector('#input5pm').value = localStorage.getItem('appt5pm');
 }
