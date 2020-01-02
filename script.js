@@ -10,6 +10,17 @@ var button4pm = document.querySelector('#button4pm');
 var button5pm = document.querySelector('#button5pm');
 
 
+(function()
+{
+//Put in a moment object
+var momentObject = moment();
+
+// display value of moment object referenced in html in the displayMoment div
+var displayMoment = document.getElementById('displayMoment');
+displayMoment.innerHTML = momentObject.format('YYYY-M-D');
+})();
+
+
 // add event listeners for each button to save values from the input into local storage
 button9am.addEventListener('click', function() {
     var input9amValue = document.querySelector('#input9am').value;
@@ -57,7 +68,7 @@ button5pm.addEventListener('click', function() {
 })
 
 window.onload = function(){
-    // Set the values in local storage back to the inputs
+    // get the values in local storage back in the input boxes where the users type stuff when the page is refreshed
     document.querySelector('#input9am').value = localStorage.getItem('appt9am');
     document.querySelector('#input10am').value = localStorage.getItem('appt10am');
     document.querySelector('#input11am').value = localStorage.getItem('appt11am');
