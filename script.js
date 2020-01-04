@@ -32,7 +32,7 @@ for (var i = 0; i < inputArray.length; i++) {
         inputArray[i].style.backgroundColor = 'green';
     }
     if (currentDataTime > currentTime) {
-        inputArray[i].style.backgroundColor = 'red';  
+        inputArray[i].style.backgroundColor = 'red';
     }
 
 }
@@ -44,7 +44,7 @@ for (var i = 0; i < inputArray.length; i++) {
 
     // display value of moment object referenced in html in the displayMoment div
     var displayMoment = document.getElementById('displayMoment');
-    displayMoment.innerHTML = momentObject.format('YYYY-M-D');
+    displayMoment.innerHTML = momentObject.format('dddd MMMM Do YYYY');
 })();
 
 
