@@ -8,8 +8,11 @@ var button2pm = document.querySelector('#button2pm');
 var button3pm = document.querySelector('#button3pm');
 var button4pm = document.querySelector('#button4pm');
 var button5pm = document.querySelector('#button5pm');
-
-
+var input9amElement = document.querySelector('#input9am');
+var currentTime = moment().format('HH'); 
+if (9 < currentTime){
+    input9amElement.style.backgroundColor = 'grey';
+}
 (function()
 {
 //Put in a moment object
@@ -23,8 +26,8 @@ displayMoment.innerHTML = momentObject.format('YYYY-M-D');
 
 // add event listeners for each button to save values from the input into local storage
 button9am.addEventListener('click', function() {
-    var input9amValue = document.querySelector('#input9am').value;
-    localStorage.setItem('appt9am', input9amValue);
+    
+    localStorage.setItem('appt9am', input9amElement.value);
 })
 
 button10am.addEventListener('click', function() {
